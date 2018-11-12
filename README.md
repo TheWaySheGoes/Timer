@@ -1,1 +1,1 @@
-# Timer for counting algos
+# Timer for counting algos in sec.
