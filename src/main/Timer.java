@@ -34,7 +34,7 @@ public class Timer {
 		if(startTime==0) {
 			throw new TimerSetupException("Timer must be started first");
 		}
-	return	("Current Time in sec: "+((System.currentTimeMillis()-startTime))/1000.000);
+	return	((((System.currentTimeMillis()-startTime))/1000.000)+" : Current Time in sec: ");
 	}	
 	/**
 	 * Shows current time in sec. without stopping the {@linkplain Timer} object
@@ -46,7 +46,7 @@ public class Timer {
 		if(startTime==0) {
 			throw new TimerSetupException("Timer must be started first");
 		}
-	return	("Current Time "+id.toUpperCase()+" in sec: "+((System.currentTimeMillis()-startTime))/1000.000);
+	return	((((System.currentTimeMillis()-startTime))/1000.000)+" : Current Time "+id.toUpperCase()+" in sec.");
 
 	}
 	
@@ -59,7 +59,7 @@ public class Timer {
 		if(startTime==0||stopTime==0) {
 			throw new TimerSetupException("Timer must be started and stopped first");
 		}
-		return ("Lapsed Time in sec: "+((this.stopTime-this.startTime)/1000.0000));
+		return (((this.stopTime-this.startTime)/1000.0000)+" : Lapsed Time in sec.");
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Timer {
 		if(startTime==0||stopTime==0) {
 				throw new TimerSetupException("Timer must be started and stopped first");
 		}
-		return ("Lapsed Time "+id.toUpperCase()+" in sec: "+((this.stopTime-this.startTime)/1000.0000));
+		return (((this.stopTime-this.startTime)/1000.0000)+ " : Lapsed Time "+id.toUpperCase()+" in sec.");
 	}
 	
 	
@@ -91,7 +91,7 @@ public class Timer {
 
 			System.out.println(t1.currentTime("test one"));
 
-	
+			Thread.sleep(1555);
 
 			t1.stopTimer();
 	
