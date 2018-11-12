@@ -1,4 +1,4 @@
-package main;
+package timer;
 import java.util.Date;
 
 public class TimerSetupException extends Exception{
